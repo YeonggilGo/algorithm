@@ -131,7 +131,6 @@ dmypy.json
 ### VirtualEnv template
 # Virtualenv
 # http://iamzed.com/2009/05/07/a-primer-on-virtualenv/
-.Python
 [Bb]in
 [Ii]nclude
 [Ll]ib
@@ -139,7 +138,6 @@ dmypy.json
 [Ll]ocal
 [Ss]cripts
 pyvenv.cfg
-.venv
 pip-selfcheck.json
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
@@ -167,7 +165,7 @@ pip-selfcheck.json
 # Mongo Explorer plugin:
 .idea/mongoSettings.xml
 
-.idea/
+.idea/*
 
 ## File-based project format:
 *.iws
