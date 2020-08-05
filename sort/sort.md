@@ -1,5 +1,18 @@
 # Sort
 
+
+
+| 알고리즘  | 평균 시간 | 최악 시간 |    기법     |              비고              |
+| :-------: | :-------: | :-------: | :---------: | :----------------------------: |
+|  Bubble   |  O(n^2)   |  O(n^2)   | 비교와 교환 |          코딩이 쉽다.          |
+| Counting  |  O(n+k)   |  O(n+k)   |   비교환    |        n이 작아야 가능         |
+| Selection |  O(n^2)   |  O(n^2)   | 비교와 교환 |    회수가 위 두개보다 적음     |
+|   Quick   | O(nlogn)  |  O(n^2)   |  분할 정복  |      평균적으로 가장 빠름      |
+| Insertion |  O(n^2)   |  O(n^2)   | 비교와 교환 |       n이 작으면 효율적        |
+|   Merge   | O(nlogn)  | O(nlogn)  |  분할 정복  | 연결 리스트의 경우 가장 효율적 |
+
+
+
 ### Bubble Sort
 
 > 배열을 2중 순회하며 크기 비교를 통해 정렬
@@ -64,4 +77,22 @@ def my_counting_sort(A, k):
 ```
 
 
+
+### Selection Sort
+
+> 주어진 자료들 중 가장 작은 값의 원소부터 차례대로 선택하여 위치를 교환하는 방식
+>
+> selection algorithm을 전체 자료에 적용
+>
+> O(n^2)
+
+```python
+def selection_sort(list):
+    for i in range(len(list) - 1):
+        min = i
+        for j in range(i + 1, len(list)):
+            if list[min] > list[j]:
+                min = j
+        list[i], list[min] = list[min], list[i]
+```
 

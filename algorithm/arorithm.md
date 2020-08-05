@@ -29,3 +29,20 @@ ans = ' '.join(list(map(str, ans)))
 print(ans)
 ```
 
+
+
+### Selection Algorithm
+
+> 저장 되어 있는 자료로 부터 k번 째로 큰(작은) 원소를 찾는 방법을 셀렉션 알고리즘이라 한다.
+
+```python
+def select(list, k):
+    for i in range(k):
+        mid_idx = i
+        for j in range(i + 1, len(list)):
+            if list[mid_idx] > list[j]:
+                mid_idx = j
+        list[i], list[mid_idx] = list[mid_idx], list[i]
+    return list[k - 1]
+```
+
