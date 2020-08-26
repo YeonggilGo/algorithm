@@ -6,6 +6,3 @@ def bubble_sort(list):
             if list[i] > list[j]:
                 list[i], list[j] = list[j], list[i]
 
-a = [3,2,1,4]
-bubble_sort(a)
-print(a)
